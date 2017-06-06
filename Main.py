@@ -3,8 +3,9 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 import os
 
+
 current = os.getcwd()
-path = "/bruno/"
+path = "/pautaFinal/"
 
 listaPautas =  os.listdir(current+path)
 
@@ -16,7 +17,7 @@ for pauta in listaPautas:
     turma = pp.open(complete)
     total =  turma["size"]
 
-    wb = load_workbook("MODELO_TESTE.xlsx")
+    wb = load_workbook("MODELO.xlsx")
     ws = wb.active
 
     ws["D6"] = turma["disciplina"]
